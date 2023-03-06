@@ -316,10 +316,10 @@ class _UserProfileState extends ConsumerState<UserProfile> {
           ),
           IconButton(
             onPressed: () {
-              Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
-              builder: (context) => WelcomePage()), (Route route) => false);
               forgetUser();
               logout();
+              Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(
+              builder: (context) => WelcomePage()), (Route route) => false);
             },
             icon: Icon(Icons.power_settings_new_rounded),
           )
